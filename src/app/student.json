@@ -1,0 +1,25 @@
+{
+  "students": [
+    {
+      "name": "João",
+      "lastname": "Souza",
+      "id": "1924823933",
+      "birthday": "12-12-2000",
+      "semester": 3
+    },
+    {
+      "name": "Carlos",
+      "lastname": "Cardoso",
+      "id": "1824752837",
+      "birthday": "03-11-1998",
+      "semester": 2
+    },
+    {
+      "name": "Fabrício",
+      "lastname": "Augusto",
+      "id": "1236784343",
+      "birthday": "20-04-2000",
+      "semester": "3"
+    }
+  ]
+}

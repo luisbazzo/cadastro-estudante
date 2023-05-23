@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row mt-4 mb-5 text-center">
+      <div class="col fs-1">
+        <h1>Cadastro de Estudantes</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <form [formGroup]="formGroupStudent">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome: </label>
+            <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="Nome">
+          </div>
+        </form>
+      </div>
+      <div class="col">
+        <form [formGroup]="formGroupStudent">
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Sobrenome: </label>
+            <input type="text" formControlName="lastname" class="form-control" id="lastname" aria-describedby="Sobrenome">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <form [formGroup]="formGroupStudent">
+          <div class="mb-3">
+            <label for="id" class="form-label">RA: </label>
+            <input type="text" formControlName="id" class="form-control" id="id" aria-describedby="RA">
+          </div>
+        </form>
+      </div>
+      <div class="col">
+        <form [formGroup]="formGroupStudent">
+          <div class="mb-3">
+            <label for="birthday" class="form-label">Data de Nascimento: </label>
+            <input type="text" formControlName="birthday" class="form-control" id="birthday" aria-describedby="Data de Nascimento">
+          </div>
+        </form>
+      </div>
+      <div class="col">
+        <form [formGroup]="formGroupStudent">
+            <div class="mb-3">
+              <label for="semester" class="form-label">Semestre: </label>
+              <input type="text" formControlName="semester" class="form-control" id="semester" aria-describedby="Semestre">
+            </div>
+          </form>
+      </div>
+    </div>
+    <div class="mb-5 text-center">
+      <button class="btn btn-primary fs-5" (click)="save()">Cadastrar</button>
+    </div>
+  
+    <div class="row text-center">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">RA</th>
+            <th scope="col">Data de Nascimento</th>
+            <th scope="col">Semestre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of student">
+            <td scope="row">{{student.name}}</td>
+            <td>{{student.lastname}}</td>
+            <td>{{student.id}}</td>
+            <td>{{student.birthday}}</td>
+            <td>{{student.semester}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
